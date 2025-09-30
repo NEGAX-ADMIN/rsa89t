@@ -1,0 +1,95 @@
+{
+  "run": {
+    "reuse_connection": false,
+    "threads": 4,
+    "per_email_delay_s": 1,
+    "batch_size": 0,
+    "batch_delay_s": 0,
+    "error_limit": 1,
+    "max_retries": 0,
+    "smtp_timeout_s" = 5,
+    "retry_delay_s": 1,
+    "test_every_n": 0,
+    "test_recipient": ""
+  },
+
+  "smtp": {
+    "servers": [
+      {
+        "smtp_host": "smtp.ethereal.email",
+        "smtp_port": 587,
+        "smtp_username": "natalie.crooks@ethereal.email",
+        "smtp_password": "yQwNWt2hDtkHtZaXvt",
+        "auto_ssl_tls": true,
+        "use_tls": true,
+        "use_ssl": false,
+        "use_no_security": false,
+        "use_smtp_email": false,
+        "smtp_email": "natalie.crooks@ethereal.email",
+        "spoof": false
+      },
+       // Another server
+    ]
+  },
+
+  "recipients": { "single": "", "file": "emails.txt", "remove_duplicates": false },
+  "frommails":  { "single": "", "file": "frommails.txt" },
+  "fromnames":  { "single": "", "file": "fromnames.txt", "allow_encoding": false, "charset": "utf-8" },
+  "subjects":   { "single": "", "file": "subjects.txt",  "allow_encoding": false, "charset": "utf-8" },
+  "links":      { "single": "", "file": "links.txt" },
+
+  "body": {
+    "type": "html",
+    "charset": "utf-8",
+    "content_transfer_encoding": "base64",
+    "html_file": "body.html",
+    "plain_file": "body.plain",
+    "comments_type": "Or Plain",
+    "comment_cte": "base64, Quoted-Printable, 7bit, 8bit, Binary"
+  },
+
+  "attachments": [
+    {
+      "use_attachment": true,
+      "original_file_path": "proof.pdf",
+      "rename_attachment_file": "attachment{{email}}.pdf",
+      "auto_detect_mime": true,
+      "mime_type": "",
+      "attachment_headers": {
+        "X-Attachment-Id": "12345",
+        "Content-ID": "<12345>",
+        "Attachment-X-Attachment-Id": "{{rstr10}}",
+        "Attachment-Content-ID": "<{{rnum5}}@{{edom}}>",
+        "Attachment-X-Custom-Attach": "Document-{{rnum6}}"
+      }
+    }
+  ],
+
+  "inline_attachments": [
+    {
+      "use_inline": false,
+      "original_file_path": "logo.png",
+      "cid": "cidLogo",
+      "tag_name": "inline_logo",
+      "auto_detect_mime": true,
+      "mime_type": "",
+      "inline_attachment_headers": {
+        "X-Attachment-Id": "12345",
+        "Content-ID": "{{rstr10}}",
+        "Inline-X-Attachment-Id": "{{rstr10}}",
+        "Inline-X-Inline-Tag": "{{inline_logo}}",
+        "Inline-X-Custom-Inline": "Logo-{{rnum5}}"
+      }
+    }
+  ],
+
+  "mime": {
+    "custom_message_id": { "enabled": false, "message_id": "example.com" },
+    "custom_boundary":   { "enabled": false, "boundary": "" },
+    "custom_priority":   { "enabled": false, "level": "normal" },
+    "custom_timezone":   { "enabled": false, "time_zone": "UTC" },
+    "custom_force_mime_type": { "enabled": false, "type": "mixed", "comment_mime_type": "eg. mixed, alternative, related" },
+    "custom_custom_headers": { "enabled": false, "headers": [] },
+    "other": { "randomize_headers": false, "automatic_dkim_enabled": false }
+  }
+}

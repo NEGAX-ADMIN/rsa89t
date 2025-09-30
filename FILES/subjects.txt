@@ -1,0 +1,10 @@
+🎉 Congratulations! You’ve Won a Surprise Gift!
+📢 Important Update: Please Read{{email}}
+✨ Your Daily Dose of Inspiration
+📝 Quick Reminder: Don’t Miss Out!
+🎁 Special Offer Just {{rnum3}}for You!
+🚀 Let’s Get Started!
+🌟 Thank You for Being Awesome!
+📬 You’ve Got Mail! {{email}}
+🔔 Friendly Notification Inside
+💡 Tips & Tricks for Your Success

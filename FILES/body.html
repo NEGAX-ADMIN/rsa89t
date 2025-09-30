@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Placeholder Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.55; margin: 24px; }
+    code, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    h1 { margin-bottom: 0.25rem; }
+    small { color: #666; }
+    section { margin: 24px 0; padding: 16px; border: 1px dashed #ccc; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 6px 8px; vertical-align: top; }
+    th { text-align: left; background: #f7f7f7; }
+    .note { color:#555; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <h1>Negax Sender – Placeholder Test Page</h1>
+  <small>Drop this HTML into a Body, Inline HTML, or attachment that supports replacements. It uses as many placeholders as possible.</small>
+
+  <section>
+    <h2>Lead Fields</h2>
+    <table>
+      <tr><th>email</th><td>{{email}}</td></tr>
+      <tr><th>euser</th><td>{{euser}}</td></tr>
+      <tr><th>edom</th><td>{{edom}}</td></tr>
+      <tr><th>edomn</th><td>{{edomn}}</td></tr>
+      <tr><th>firstname</th><td>{{firstname}}</td></tr>
+      <tr><th>lastname</th><td>{{lastname}}</td></tr>
+      <tr><th>address</th><td>{{address}}</td></tr>
+      <tr><th>city</th><td>{{city}}</td></tr>
+      <tr><th>country</th><td>{{country}}</td></tr>
+      <tr><th>zip_code</th><td>{{zip_code}}</td></tr>
+      <tr><th>phone_number / sms</th><td>{{phone_number}} / {{sms}}</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Rendered Top-Level Fields</h2>
+    <p><strong>Subject</strong>: <code>{{subj}}</code></p>
+    <p><strong>From Name</strong>: <code>{{fromn}}</code></p>
+    <p><strong>From Mail</strong>: <code>{{fromm}}</code></p>
+    <p><strong>Link</strong>: <a href="{{link}}">{{link}}</a></p>
+  </section>
+
+  <section>
+    <h2>Logos (from lead email & frommail)</h2>
+    <table>
+      <tr><th>email_logo_url</th><td>{{email_logo_url}}</td></tr>
+      <tr><th>email_logo_bs4</th><td>{{email_logo_bs4}}</td></tr>
+      <tr><th>sms_logo_url</th><td>{{sms_logo_url}}</td></tr>
+      <tr><th>sms_logo_bs4</th><td>{{sms_logo_bs4}}</td></tr>
+      <tr><th>frommail_logo_url</th><td>{{frommail_logo_url}}</td></tr>
+      <tr><th>frommail_logo_bs4</th><td>{{frommail_logo_bs4}}</td></tr>
+    </table>
+    <p class="note">Function-style logo helpers:</p>
+    <ul>
+      <li>URL for example.com → <code>{{domain_logo_url("example.com")}}</code></li>
+      <li>IMG for example.com → {{domain_logo_bs4('example.com')}}</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Functions</h2>
+    <table>
+      <tr><th>bs64(*email)</th><td>{{bs64(*email)}}</td></tr>
+      <tr><th>urlencode(*link)</th><td>{{urlencode(*link)}}</td></tr>
+      <tr><th>truncate_email(*email, 1, 1, '#')</th><td>{{truncate_email(*email, 1, 1, '#')}}</td></tr>
+      <tr><th>upper(*firstname)</th><td>{{upper(*firstname)}}</td></tr>
+      <tr><th>lower(*country)</th><td>{{lower(*country)}}</td></tr>
+      <tr><th>capitalize(*city)</th><td>{{capitalize(*city)}}</td></tr>
+      <tr><th>md5(Hello)</th><td>{{md5(Hello)}}</td></tr>
+      <tr><th>sha1(Hello)</th><td>{{sha1(Hello)}}</td></tr>
+      <tr><th>sha2(Hello)</th><td>{{sha2(Hello)}}</td></tr>
+      <tr><th>sha3(Hello)</th><td>{{sha3(Hello)}}</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Random Strings</h2>
+    <ul>
+      <li>rstr8: <code>{{rstr8}}</code></li>
+      <li>rnum6: <code>{{rnum6}}</code></li>
+      <li>ralpha5: <code>{{ralpha5}}</code></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Date / Time</h2>
+    <table>
+      <tr><th>date1..3</th><td>{{date1}} &nbsp; | &nbsp; {{date2}} &nbsp; | &nbsp; {{date3}}</td></tr>
+      <tr><th>time1..3</th><td>{{time1}} &nbsp; | &nbsp; {{time2}} &nbsp; | &nbsp; {{time3}}</td></tr>
+      <tr><th>time_date1..3</th><td>{{time_date1}} &nbsp; | &nbsp; {{time_date2}} &nbsp; | &nbsp; {{time_date3}}</td></tr>
+      <tr><th>date_no_year1..3</th><td>{{date_no_year1}} &nbsp; | &nbsp; {{date_no_year2}} &nbsp; | &nbsp; {{date_no_year3}}</td></tr>
+      <tr><th>month1..3</th><td>{{month1}} &nbsp; | &nbsp; {{month2}} &nbsp; | &nbsp; {{month3}}</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Faker Placeholders</h2>
+    <table>
+      <tr><th>rfname</th><td>{{rfname}}</td></tr>
+      <tr><th>rlname</th><td>{{rlname}}</td></tr>
+      <tr><th>rfullname</th><td>{{rfullname}}</td></tr>
+      <tr><th>randip (IPv4)</th><td>{{randip}}</td></tr>
+      <tr><th>ripv6</th><td>{{ripv6}}</td></tr>
+      <tr><th>rdom</th><td>{{rdom}}</td></tr>
+      <tr><th>rurl</th><td>{{rurl}}</td></tr>
+      <tr><th>rcomp_email</th><td>{{rcomp_email}}</td></tr>
+      <tr><th>rcompany</th><td>{{rcompany}}</td></tr>
+      <tr><th>rjob</th><td>{{rjob}}</td></tr>
+      <tr><th>raddress</th><td>{{raddress}}</td></tr>
+      <tr><th>rcity</th><td>{{rcity}}</td></tr>
+      <tr><th>rcountry</th><td>{{rcountry}}</td></tr>
+      <tr><th>rphone</th><td>{{rphone}}</td></tr>
+      <tr><th>rparagraph</th><td>{{rparagraph}}</td></tr>
+      <tr><th>rsentence</th><td>{{rsentence}}</td></tr>
+      <tr><th>ruseragent</th><td><code>{{ruseragent}}</code></td></tr>
+      <tr><th>rcreditcard</th><td>{{rcreditcard}}</td></tr>
+      <tr><th>rssn</th><td>{{rssn}}</td></tr>
+      <tr><th>randroid_token</th><td><code>{{randroid_token}}</code></td></tr>
+      <tr><th>rchrome_ua</th><td><code>{{rchrome_ua}}</code></td></tr>
+      <tr><th>rfirefox_ua</th><td><code>{{rfirefox_ua}}</code></td></tr>
+      <tr><th>rie_ua</th><td><code>{{rie_ua}}</code></td></tr>
+      <tr><th>rios_token</th><td><code>{{rios_token}}</code></td></tr>
+      <tr><th>rlinux_token</th><td><code>{{rlinux_token}}</code></td></tr>
+      <tr><th>rlinux_processor</th><td><code>{{rlinux_processor}}</code></td></tr>
+      <tr><th>rmac_token</th><td><code>{{rmac_token}}</code></td></tr>
+      <tr><th>rmac_processor</th><td><code>{{rmac_processor}}</code></td></tr>
+      <tr><th>ropera_ua</th><td><code>{{ropera_ua}}</code></td></tr>
+      <tr><th>rsafari_ua</th><td><code>{{rsafari_ua}}</code></td></tr>
+      <tr><th>rwin_token</th><td><code>{{rwin_token}}</code></td></tr>
+      <tr><th>rua</th><td><code>{{rua}}</code></td></tr>
+      <tr><th>rhtml (embedded)</th><td>{{rhtml}}</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Conditionals</h2>
+    <p>{{if email}}Email exists → <strong>{{email}}</strong>{{endif}}</p>
+    <p>{{if not country}}No country available (this line shows only if empty).{{endif}}</p>
+  </section>
+
+  <section>
+    <h2>Inline Attachments / QR Codes</h2>
+    <p class="note">
+      If you add an inline attachment with <em>tag name</em> <code>inline_logo</code>, it will render here:
+    </p>
+    <p>As raw token: <code>{{inline_logo}}</code></p>
+    <p>As image tag (will work if the placeholder resolves to a <code>data:</code> URI):</p>
+    <p><img alt="inline logo" src="{{inline_logo}}" style="max-width:220px;"></p>
+
+    <p class="note">
+      If you add a QR code attachment with <em>tag name</em> <code>qr_code</code>, it will render here:
+    </p>
+    <p>As raw token: <code>{{qr_code}}</code></p>
+    <p><img alt="qr" src="{{qr_code}}" style="max-width:220px;"></p>
+  </section>
+
+  <section>
+    <h2>Mime Config Placeholders</h2>
+    <table>
+      <tr><th>mime_from</th><td>{{mime_from}}</td></tr>
+      <tr><th>mime_subject</th><td>{{mime_subject}}</td></tr>
+      <tr><th>mime_to</th><td>{{mime_to}}</td></tr>
+    </table>
+  </section>
+
+  <footer class="note">
+    <p>Tip: Put this HTML in <em>Body → HTML</em> to see replacements directly in the email body. Some placeholders (inline/QR) require you to configure attachments with the matching tag names.</p>
+  </footer>
+</body>
+</html>

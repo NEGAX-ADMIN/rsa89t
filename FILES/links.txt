@@ -1,0 +1,10 @@
+https://www.python.org/
+https://github.com/
+https://stackoverflow.com/
+https://www.reddit.com/r/programming/
+https://docs.python.org/3/
+https://realpython.com/
+https://www.djangoproject.com/
+https://flask.palletsprojects.com/
+https://www.linux.org/
+https://www.gnu.org/
