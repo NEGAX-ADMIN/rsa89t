@@ -28,7 +28,7 @@ Installation (Ubuntu / Linux)
 
 2. Or download from the Tool Updater:
    - Extract the package (Mini_Sender_Linux1.0_Ubuntu.zip)
-   - Copy the "nega" binary and "config.nega" file to your VPS folder
+   - Copy the FILE directory, "nega" binary and "config.nega" file to your VPS folder
 
 
 Running the Program
